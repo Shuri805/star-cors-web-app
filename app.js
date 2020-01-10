@@ -17,8 +17,13 @@ const renderData = (endpoint, data, itemRenderer)=> {
       </li>
     `;
   }).join('');
-  html = `<h2>${endpoint}</h2><ul>${html}</ul>`;
+  html = `<h2>${endpoint}</h2><input /><ul>${html}</ul>`;
   div.innerHTML = html;
+  const input = div.querySelector('input');
+  input.addEventListener('keyup', (ev) => {
+    const search = ev.target.value;
+    const ul = div.querySelector(i'l)
+  }
 };
 
 const renderPeople = (people)=> {
@@ -85,3 +90,7 @@ Promise.all(promises)
     renderVehicles(vehicles);
     renderStarships(starships);
   });
+
+  function filterFunc (){
+
+  }
